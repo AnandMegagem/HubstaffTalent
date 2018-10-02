@@ -1,0 +1,35 @@
+{
+  "jobId":1,
+  "jobName": "\"Java AWS Developer\"",
+  "jobDesc": "\"Java Developer with knowledge in Spring,Spring Boot, JPA and Rest Services\"",
+  "company": {
+  	"id":1,
+    "cmpyName": "MyNewCompany",
+    "cmpyLocation": "Singapore",
+    "cmpyURL": "\"https://www.google.com\"",
+    "cmpyCreatedDate": "2018-09-25",
+    "cmpyCreatedBy": "admin",
+    "cmpyUpdatedDate": "2018-10-02",
+    "cmpyUpdatedBy": "admin"
+
+  },
+  "jobTime": "Part Time",
+  "keywords": [
+    "Spring",
+    "J2EE",
+    "JPA",
+    "Spring Boot",
+    "Rest Services"
+  ],
+  "jobExperience": 5,
+  "jobPayScale": 25,
+  "jobLanguages": [
+    "English",
+    "Spanish",
+    "Tamil"
+  ],
+  "jobCreateDate": "2018-09-25",
+  "jobCreatedBy": "self",
+  "jobUpdatedDate": "2018-09-27",
+  "jobUpdatedBy": "user"
+}
