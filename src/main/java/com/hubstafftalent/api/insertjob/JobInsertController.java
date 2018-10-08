@@ -1,5 +1,7 @@
-package com.hubstafftalent.api;
+package com.hubstafftalent.api.insertjob;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +32,9 @@ public class JobInsertController {
 	}
 
 	@PostMapping("/bulkAddJobInfo")
-    public void uploadFile(@RequestParam("file") MultipartFile file) {
-        jobInfoService.storeFile(file);
+    public void uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
+        File inputFile=jobInfoService.storeFileToTempDir(file);
+        List<JobInfo> jobInfoList= jobInfoService.readFile(inputFile);
     }
+
 }

@@ -1,7 +1,7 @@
-package com.hubstafftalent.api;
+package com.hubstafftalent.api.insertjob;
 
-import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -29,13 +30,18 @@ public class JobInfo {
 
 	private String jobTime; // Can be Enum
 
-	private String[] keywords;
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name= "jobId")
+	private List<JobKeywords> keywords;
 
 	private Long jobPayScale;
 
 	private Integer jobExperience;
 
-	private String[] jobLanguages;
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name="jobId")
+	private List<JobLanguages> jobLanguages;
+
 	@Temporal(TemporalType.DATE)
 	private Date jobCreateDate;
 
@@ -65,8 +71,12 @@ public class JobInfo {
 		return jobTime;
 	}
 
-	public String[] getKeywords() {
+	public List<JobKeywords> getKeywords() {
 		return keywords;
+	}
+
+	public List<JobLanguages> getJobLanguages() {
+		return jobLanguages;
 	}
 
 	public Long getJobPayScale() {
@@ -77,9 +87,7 @@ public class JobInfo {
 		return jobExperience;
 	}
 
-	public String[] getJobLanguages() {
-		return jobLanguages;
-	}
+
 
 	public Date getJobCreateDate() {
 		return jobCreateDate;
@@ -117,9 +125,7 @@ public class JobInfo {
 		this.jobTime = jobTime;
 	}
 
-	public void setKeywords(String[] keywords) {
-		this.keywords = keywords;
-	}
+
 
 	public void setJobPayScale(Long jobPayScale) {
 		this.jobPayScale = jobPayScale;
@@ -129,7 +135,11 @@ public class JobInfo {
 		this.jobExperience = jobExperience;
 	}
 
-	public void setJobLanguages(String[] jobLanguages) {
+	public void setKeywords(List<JobKeywords> keywords) {
+		this.keywords = keywords;
+	}
+
+	public void setJobLanguages(List<JobLanguages> jobLanguages) {
 		this.jobLanguages = jobLanguages;
 	}
 
@@ -154,9 +164,9 @@ public class JobInfo {
 		return "JobInfo [jobId=" + jobId + ", jobName=" + jobName
 				+ ", jobDesc=" + jobDesc + ", company=" + company
 				+ ", jobTime=" + jobTime + ", keywords="
-				+ Arrays.toString(keywords) + ", jobPayScale=" + jobPayScale
+				+ keywords + ", jobPayScale=" + jobPayScale
 				+ ", jobExperience=" + jobExperience + ", jobLanguages="
-				+ Arrays.toString(jobLanguages) + ", jobCreateDate="
+				+ jobLanguages + ", jobCreateDate="
 				+ jobCreateDate + ", jobCreatedBy=" + jobCreatedBy
 				+ ", jobUpdatedDate=" + jobUpdatedDate + ", jobUpdatedBy="
 				+ jobUpdatedBy + "]";

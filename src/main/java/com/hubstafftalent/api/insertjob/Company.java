@@ -1,4 +1,4 @@
-package com.hubstafftalent.api;
+package com.hubstafftalent.api.insertjob;
 
 import java.util.Date;
 
@@ -93,8 +93,5 @@ public class Company {
 				+ cmpyCreatedBy + ", cmpyUpdatedDate=" + cmpyUpdatedDate
 				+ ", cmpyUpdatedBy=" + cmpyUpdatedBy + "]";
 	}
-
-
-
 }
 

@@ -1,22 +1,21 @@
-package com.hubstafftalent.searchApi;
+package com.hubstafftalent.api.searchJob;
 
 import java.util.Arrays;
 
-import javax.persistence.Entity;
 
-@Entity
 public class JobSearchCriteria {
 
 	private Long jobId;
 	private String jobName;
 	private String[] keywords;
-	private Integer minPay;
-	private Integer maxPay;
-	private String[] countries;
+	private Long minPay;
+	private Long maxPay;
+	private String location;
 	private String[] languages;
 	private Integer minExp;
 	private Integer maxExp;
 	private String[] availability;
+	private String cmpnyname;
 	public Long getJobId() {
 		return jobId;
 	}
@@ -26,14 +25,14 @@ public class JobSearchCriteria {
 	public String[] getKeywords() {
 		return keywords;
 	}
-	public Integer getMinPay() {
+	public Long getMinPay() {
 		return minPay;
 	}
-	public Integer getMaxPay() {
+	public Long getMaxPay() {
 		return maxPay;
 	}
-	public String[] getCountries() {
-		return countries;
+	public String getLocation() {
+		return location;
 	}
 	public String[] getLanguages() {
 		return languages;
@@ -56,14 +55,14 @@ public class JobSearchCriteria {
 	public void setKeywords(String[] keywords) {
 		this.keywords = keywords;
 	}
-	public void setMinPay(Integer minPay) {
+	public void setMinPay(Long minPay) {
 		this.minPay = minPay;
 	}
-	public void setMaxPay(Integer maxPay) {
+	public void setMaxPay(Long maxPay) {
 		this.maxPay = maxPay;
 	}
-	public void setCountries(String[] countries) {
-		this.countries = countries;
+	public void setLocation(String location) {
+		this.location = location;
 	}
 	public void setLanguages(String[] languages) {
 		this.languages = languages;
@@ -77,12 +76,18 @@ public class JobSearchCriteria {
 	public void setAvailability(String[] availability) {
 		this.availability = availability;
 	}
+	public String getCmpnyname() {
+		return cmpnyname;
+	}
+	public void setCmpnyname(String cmpnyname) {
+		this.cmpnyname = cmpnyname;
+	}
 	@Override
 	public String toString() {
 		return "JobSearchCriteria [jobId=" + jobId + ", jobName=" + jobName
 				+ ", keywords=" + Arrays.toString(keywords) + ", minPay="
-				+ minPay + ", maxPay=" + maxPay + ", countries="
-				+ Arrays.toString(countries) + ", languages="
+				+ minPay + ", maxPay=" + maxPay + ", location="
+				+ location + ", languages="
 				+ Arrays.toString(languages) + ", minExp=" + minExp
 				+ ", maxExp=" + maxExp + ", availability="
 				+ Arrays.toString(availability) + "]";

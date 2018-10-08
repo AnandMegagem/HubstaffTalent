@@ -1,4 +1,4 @@
-package com.hubstafftalent.api;
+package com.hubstafftalent.api.insertjob;
 
 import org.springframework.data.repository.CrudRepository;
 

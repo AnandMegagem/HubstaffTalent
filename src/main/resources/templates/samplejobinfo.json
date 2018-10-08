@@ -1,35 +1,54 @@
-{
-  "jobId":1,
-  "jobName": "\"Java AWS Developer\"",
-  "jobDesc": "\"Java Developer with knowledge in Spring,Spring Boot, JPA and Rest Services\"",
-  "company": {
-  	"id":1,
-    "cmpyName": "MyNewCompany",
-    "cmpyLocation": "Singapore",
-    "cmpyURL": "\"https://www.google.com\"",
-    "cmpyCreatedDate": "2018-09-25",
-    "cmpyCreatedBy": "admin",
-    "cmpyUpdatedDate": "2018-10-02",
-    "cmpyUpdatedBy": "admin"
-
-  },
-  "jobTime": "Part Time",
-  "keywords": [
-    "Spring",
-    "J2EE",
-    "JPA",
-    "Spring Boot",
-    "Rest Services"
-  ],
-  "jobExperience": 5,
-  "jobPayScale": 25,
-  "jobLanguages": [
-    "English",
-    "Spanish",
-    "Tamil"
-  ],
-  "jobCreateDate": "2018-09-25",
-  "jobCreatedBy": "self",
-  "jobUpdatedDate": "2018-09-27",
-  "jobUpdatedBy": "user"
-}
+[
+    {
+        "jobId": 1,
+        "jobName": "Java Developer",
+        "jobDesc": "Java Developer",
+        "company": {
+        	"Id":1,
+            "cmpyName": "MyCompany",
+            "cmpyLocation": "Chennai",
+            "cmpyURL": null,
+            "cmpyCreatedDate": "2018-30-09",
+            "cmpyCreatedBy": "admin",
+            "cmpyUpdatedDate": "2017-30-31",
+            "cmpyUpdatedBy": "admin",
+            "id": 1
+        },
+        "jobTime": "parttime",
+        "keywords": [
+            {
+                "id": 1,
+                "jobId": 1,
+                "keyword": "Java"
+            },
+            {
+                "id": 2,
+                "jobId": 1,
+                "keyword": "Spring"
+            },
+            {
+                "id": 3,
+                "jobId": 1,
+                "keyword": "Aws"
+            }
+        ],
+        "jobPayScale": 1000,
+        "jobExperience": 3,
+        "jobLanguages": [
+            {
+                "id": 1,
+                "jobId": 1,
+                "language": "English"
+            },
+            {
+                "id": 2,
+                "jobId": 1,
+                "language": "Tamil"
+            }
+        ],
+        "jobCreateDate": "2018-01-01",
+        "jobCreatedBy": "admin",
+        "jobUpdatedDate": "2018-10-10",
+        "jobUpdatedBy": "admin"
+    }
+]
