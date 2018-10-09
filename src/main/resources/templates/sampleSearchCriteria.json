@@ -1,0 +1,12 @@
+{
+"keywords": [
+    "C#","Java"
+  ],
+  "minPay":1,
+  "maxPay":40000,
+  "location":"Chennai",
+  "minExp":0,
+  "maxExp":200,
+	"availability":["parttime"],
+	"languages":["English"]
+}
